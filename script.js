@@ -25,3 +25,6 @@ function square(product, input) {
     i++;
   }
 }
+span.addEventListener("mouseover", function () {
+  span.style.backgroundColor = "#fff";
+});
