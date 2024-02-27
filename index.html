@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch scetch</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: rgb(2, 56, 56);
+      }
+      .container {
+        width: 1000px;
+        height: 95vh;
+        margin: 10px auto 10px auto;
+        padding-bottom: 30px;
+        border: 1px solid grey;
+        background-color: rgb(97, 120, 120);
+        display: flex;
+      }
+      .square {
+        width: 10%;
+        height: 10%;
+        border: 1px solid #030101;
+        /* background-color: rgb(219, 228, 225); */
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Insert the number of squares</button>
+    <div class="container"></div>
+    <script>
+      const container = document.querySelector(".container");
+      const btn = document.querySelector("button");
+      let input;
+      let product;
+      let i = 1;
+
+      btn.addEventListener("click", function () {
+        input = parseInt(
+          prompt("Insert the number of square you want to create:")
+        );
+        product = input * input;
+        square(product, input);
+      });
+      function square(product, input) {
+        while (i <= product) {
+          const span = document.createElement("span");
+          span.setAttribute("class", "square");
+
+          if (i > input) {
+            container.style.display = "flex";
+            container.style.flexWrap = "wrap";
+            input += input;
+          }
+
+          container.appendChild(span);
+
+          i++;
+        }
+      }
+    </script>
+  </body>
+</html>

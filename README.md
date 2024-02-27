@@ -1,2 +1,3 @@
 # JS-etch-sketch
-Male progress with persistent
+
+Make progress with persistent.
