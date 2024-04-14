@@ -39,7 +39,7 @@ function square(product, input) {
 //       container.appendChild(div);
 //     }
 
-//     // container.style.display = "flex";
-//     // container.style.flexWrap = "wrap";
+//     container.style.display = "flex";
+//     container.style.flexWrap = "wrap";
 //   }
 // }
