@@ -1,8 +1,8 @@
 const container = document.querySelector(".container");
+const btn = document.querySelector("button");
 
 container.style.display = "flex";
 container.style.flexWrap = "wrap";
-const btn = document.querySelector("button");
 let input;
 let product;
 let i = 1;
@@ -20,8 +20,8 @@ function square(product, input) {
       const div = document.createElement("div");
       div.setAttribute("class", "square");
       container.appendChild(div);
-      container.style.display = "flex";
-      container.style.flexWrap = "wrap";
+      // container.style.display = "flex";
+      // container.style.flexWrap = "wrap";
       input += input;
     } else {
       const div = document.createElement("div");
