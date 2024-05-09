@@ -16,18 +16,12 @@ btn.addEventListener("click", (input) => {
 });
 function square(product, input) {
   while (i <= product) {
-    if (i == input + 1) {
-      const div = document.createElement("div");
-      div.setAttribute("class", "square");
-      container.appendChild(div);
-      // container.style.display = "flex";
-      // container.style.flexWrap = "wrap";
-      input += input;
-    } else {
+    for (let k = 0; k < input; k++) {
       const div = document.createElement("div");
       div.setAttribute("class", "square");
       container.appendChild(div);
     }
+
     i++;
   }
 }
@@ -42,4 +36,17 @@ function square(product, input) {
 //     container.style.display = "flex";
 //     container.style.flexWrap = "wrap";
 //   }
+// }
+
+//////////   // if (i == input + 1) {
+//   const div = document.createElement("div");
+//   div.setAttribute("class", "square");
+//   container.appendChild(div);
+//   // container.style.display = "flex";
+//   // container.style.flexWrap = "wrap";
+//   input += input;
+// } else {
+//   const div = document.createElement("div");
+//   div.setAttribute("class", "square");
+//   container.appendChild(div);
 // }
