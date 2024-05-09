@@ -1,8 +1,5 @@
 const container = document.querySelector(".container");
 const btn = document.querySelector("button");
-
-container.style.display = "flex";
-container.style.flexWrap = "wrap";
 let input;
 let product;
 
@@ -14,15 +11,15 @@ btn.addEventListener("click", (input) => {
   }
 });
 
-function square(product, input) {
-  container.innerHTML = ""; // Clear previous grid
+function square(product) {
+  // container.innerHTML = ""; // Clear previous grid
 
   const squareWidth = 1002 / input; // Calculate the width of each square based on the number of squares
   const squareHeight = 1032 / input;
   for (let i = 1; i <= product; i++) {
     const div = document.createElement("div");
-    div.style.width = `${squareWidth}%`;
-    div.style.height = `${squareHeight}%`;
+    div.style.width = squareWidth;
+    div.style.height = squareHeight;
     // div.style.paddingBottom = `${squareSize}%`;
     div.setAttribute("class", "square");
     container.appendChild(div);
