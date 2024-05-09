@@ -18,27 +18,14 @@ function square(product) {
   const squareHeight = 1032 / input;
   for (let i = 1; i <= product; i++) {
     const div = document.createElement("div");
-    div.style.width = squareWidth;
-    div.style.height = squareHeight;
+    div.style.width = `${squareWidth}px`;
+    div.style.height = `${squareHeight}px`;
     // div.style.paddingBottom = `${squareSize}%`;
     div.setAttribute("class", "square");
     container.appendChild(div);
   }
 }
-// function square(product, input) {
-//   while (i <= product) {
-//     if (i == input + 1) {
-//       const div = document.createElement("div");
-//       div.setAttribute("class", "square");
-//       container.appendChild(div);
-//     } else {
-//       const div = document.createElement("div");
-//       div.setAttribute("class", "square");
-//       container.appendChild(div);
-//     }
-//     i++;
-//   }
-// }
+/
 // function square(input) {
 //   for (let i = 1; i <= input; i++) {
 //     for (let j = 1; j <= input; j++) {
