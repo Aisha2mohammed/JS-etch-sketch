@@ -17,12 +17,13 @@ btn.addEventListener("click", (input) => {
 function square(product, input) {
   container.innerHTML = ""; // Clear previous grid
 
-  const squareSize = 100 / input; // Calculate the size of each square based on the number of squares
-  for (let i = 0; i <= product; i++) {
+  const squareWidth = 1002 / input; // Calculate the width of each square based on the number of squares
+  const squareHeight = 1032 / input;
+  for (let i = 1; i <= product; i++) {
     const div = document.createElement("div");
-    div.style.width = `${squareSize}%`;
-    div.style.height = `${squareSize}%`;
-    div.style.paddingBottom = `${squareSize}%`;
+    div.style.width = `${squareWidth}%`;
+    div.style.height = `${squareHeight}%`;
+    // div.style.paddingBottom = `${squareSize}%`;
     div.setAttribute("class", "square");
     container.appendChild(div);
   }
