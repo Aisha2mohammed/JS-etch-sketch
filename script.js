@@ -14,9 +14,11 @@ btn.addEventListener("click", (input) => {
 function square(input) {
   const squareWidth = 1002 / input; // Calculate the width of each square based on the number of squares
   const squareHeight = 1032 / input;
+  console.log(squareHeight);
+  console.log(squareWidth);
   for (let i = 1; i <= input; i++) {
     const row = document.createElement("div");
-    row.setAttributes("class", "row");
+    row.setAttribute("class", "row");
 
     for (let j = 1; j <= input; j++) {
       const div = document.createElement("div");
@@ -26,7 +28,7 @@ function square(input) {
       row.appendChild(div);
     }
 
-    container.appendChild(div);
+    container.appendChild(row);
   }
 }
 
