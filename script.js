@@ -5,7 +5,7 @@ let product;
 
 btn.addEventListener("click", (input) => {
   input = parseInt(prompt("Insert the number of square you want to create:"));
-  if (input > 0 && input <= 100) {
+  if (input > 0 && input <= 200) {
     product = input * input;
     square(input);
   }
