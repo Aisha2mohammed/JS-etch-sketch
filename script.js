@@ -12,15 +12,15 @@ btn.addEventListener("click", (input) => {
 });
 
 function square(input) {
-  const squareWidth = 1002 / input; // Calculate the width of each square based on the number of squares
-  const squareHeight = 1032 / input;
+  const squareWidth = 1000 / input; // Calculate the width of each square based on the number of squares
+  const squareHeight = 1000 / input;
   console.log(squareHeight);
   console.log(squareWidth);
-  for (let i = 1; i <= input; i++) {
+  for (let i = 0; i < input; i++) {
     const row = document.createElement("div");
     row.setAttribute("class", "row");
 
-    for (let j = 1; j <= input; j++) {
+    for (let j = 0; j < input; j++) {
       const div = document.createElement("div");
       div.style.width = `${squareWidth}px`;
       div.style.height = `${squareHeight}px`;
