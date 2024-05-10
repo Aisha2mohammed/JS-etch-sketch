@@ -31,14 +31,3 @@ function square(input) {
     container.appendChild(row);
   }
 }
-
-// function square(input) {
-//   for (let i = 1; i <= input; i++) {
-//     for (let j = 1; j <= input; j++) {
-//       const div = document.createElement("div");
-//       div.setAttribute("class", "square");
-//       container.appendChild(div);
-//     }
-
-//   }
-// }
