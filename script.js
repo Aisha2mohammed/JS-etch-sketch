@@ -1,20 +1,8 @@
 const container = document.querySelector(".container");
 const sqr = document.querySelector(".square");
 const btn = document.querySelector("button");
-const rgb = "rgb(1,1,1)";
+const rgb = "rgb(2,5,8)";
 let input, multipliedRgb, color, rgbVal;
-
-btn.addEventListener("mouseover", () => {
-  let num = Math.floor(Math.random() * 1000);
-  console.log(num);
-  rgbVal = rgb.match(/\d+/g).map(Number);
-  if (num <= 225) {
-    multipliedRgb = rgbVal.map((val) => {
-      val * num;
-    });
-  }
-  color = `rgb${multipliedRgb.join(",")}`;
-});
 
 btn.addEventListener("click", (input) => {
   input = parseInt(prompt("Insert the number of square you want to create:"));
@@ -36,8 +24,23 @@ function square(input) {
       const div = document.createElement("div");
       div.style.width = `${squareWidth}px`;
       div.style.height = `${squareHeight}px`;
-      div.style.backgroundColor = color;
       div.setAttribute("class", "square");
+
+      div.addEventListener("mouseover", () => {
+        let num = Math.floor(Math.random() * 1000);
+        console.log(num);
+        rgbVal = rgb.match(/\d+/g).map(Number);
+        if (num <= 225) {
+          multipliedRgb = rgbVal.map((val) => {
+            return val * num;
+          });
+        }
+        console.log(multipliedRgb);
+        color = `rgb(${multipliedRgb.join(",")})`;
+        console.log(color);
+        div.style.backgroundColor = `${color}`;
+      });
+
       row.appendChild(div);
     }
 
