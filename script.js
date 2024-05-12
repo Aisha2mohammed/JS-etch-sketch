@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
 const sqr = document.querySelector(".square");
 const btn = document.querySelector("button");
-const rgb = "rgb(2,5,8)";
+const rgb = "rgb(41,96,29)";
 let input, multipliedRgb, color, rgbVal;
 
 btn.addEventListener("click", (input) => {
@@ -27,9 +27,9 @@ function square(input) {
       div.setAttribute("class", "square");
 
       div.addEventListener("mouseover", () => {
-        let num = Math.floor(Math.random() * 1000);
+        let num = Math.floor(Math.random() * 100);
         console.log(num);
-        rgbVal = rgb.match(/\d+/g).map(Number);
+        rgbVal = rgb.match(/\d+/g).map(Number); //match the string value with 0-9 and store as an array form
         if (num <= 225) {
           multipliedRgb = rgbVal.map((val) => {
             return val * num;
